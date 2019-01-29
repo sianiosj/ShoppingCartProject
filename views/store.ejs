@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Store</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="store.js" defer></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1 class="shop-title">SHOP</h1>
+            <form action="/modify">
+                <button class="btn btn-nav">Modify Items</button>
+            </form>
+        </header>
+        <section class="section1">
+            <h1 class="merch-title">Merchandise</h1>
+            <div class="store-items">
+            <% items.forEach(function(item){ %>
+                <div class="store-item">
+                    <span class="store-item-name"><%= item.name %></span>
+                    <img class="store-item-image" src="Images/<%= item.img %>">
+                    <div class="store-item-btnprice">
+                        <span class="store-item-price">€<%= item.price / 100%></span>
+                        <button class="btn addToCart" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            <% }) %>
+            </div>
+        </section>
+        <%# Shopping Cart #%>
+        <section class="section2">
+            <h2 class="cart-title">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">€0</span>
+            </div>
+        </section>
+        <button class="btn btn-purchase" type="button">PURCHASE</button>
+        <footer class="main-footer"></footer>
+    </body>
+</html>

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Images/bg_macbook_v2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.main-header {
+    height: 100px;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 3px 5px 4px rgba(65, 65, 65, 0.459);
+}
+
+.shop-title {
+    display: block;
+    color: rgb(63, 63, 63);
+    font-size: 3em;
+    margin: 0px auto 0px auto;
+    padding-top: 14px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    background-color: rgb(255, 109, 73);
+    color: white;
+    height: 29px;
+    width: 120px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(255, 140, 111);
+}
+
+.btn-removeAllMerch {
+    font-weight: bold;
+    border: none;
+    background-color: rgb(255, 109, 73);
+    color: white;
+    height: 29px;
+    width: 243px;
+}
+
+.btn-removeAllMerch:hover {
+    background-color: rgb(255, 140, 111);
+}
+
+.addToCart {
+    font-weight: bold;
+    height: 24px;
+}
+
+.section1 {
+    max-width: 800px;
+    min-height: 800px;
+    margin: 10px auto 0px auto;
+    padding: 10px 10%;
+    background-color: rgba(37, 37, 37, 0.9);
+}
+
+.merch-title {
+    color: rgb(255, 255, 255);
+    font-size: 1.6em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.918);
+    text-align: center;
+    width: 180px;
+    padding: 4px;
+    margin-left: 58px;
+}
+
+.store-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.store-item {
+    display: block;
+    margin: 2px auto 10px auto;
+    padding: 2px;
+    height: 220px;
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.store-item-name {
+    margin-bottom: 4px;
+    display: block;
+    text-align: center;
+    font-weight: light;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+.store-item-image {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.store-item-btnprice {
+    font-weight: light;
+    text-align: center;
+    color: #fff;
+    margin: 5px auto 2px auto;
+}
+
+.section2 {
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 460px;
+    margin: 10px auto 0px auto;
+    padding: 10px 10%;
+    background-color: rgb(255, 150, 124, 0.9);
+}
+
+.cart-title {
+    font-size: 1.6em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #333;
+    text-align: center;
+    width: 80px;
+    padding: 4px;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-name {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btn-remove {
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    color: rgb(255, 255, 255);
+    background-color: #EB5757;
+    border: none;
+    border-radius: .1em;
+    font-weight: bold;
+}
+
+.btn-remove:hover {
+    background-color: rgb(230, 38, 38);
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 1px;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+    background-color: rgb(255, 150, 124);
+    border-radius: 0;
+    border: 1px solid #333;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    margin-left: auto;
+    margin-right: 0px;
+    width: 160px;
+    height: 34px;
+    text-align: end;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color:#333;
+    padding-right: 4px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.btn-purchase {
+    height: 60px;
+    width: 180px;
+    display: block;
+    margin: 30px auto 60px auto;
+    font-size: 1.3em;
+}
+
+.btn-nav {
+    width: 140px;
+    margin: 34px 0px 0px 12px;
+    background-color: #fff;
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-top-color: rgb(100, 100, 100);
+    border-bottom-color: rgb(100, 100, 100);
+}
+
+.btn-nav:hover {
+    background-color: rgba(170, 170, 170, 0.6);
+}
+
+.addMerchForm {
+    background-color: rgba(37, 37, 37, 0.9);
+    margin: 10px 34% 10px 34%;
+    padding: 12px 0px 12px 0px;
+    text-align: center;
+}
+
+.removeMerchForm {
+    background-color: rgba(37, 37, 37, 0.9);
+    margin: 0px 34% 0px 34%;
+    padding: 12px 0px 12px 0px;
+    text-align: center;
+}
+
+.emptyBlock {
+    height: 440px;
+}
+
+.inputBox {
+    font-size: 1.2em;
+    height: 34px;
+    width: 200px;
+    border: none;
+}
+
+.imgSelectList {
+    font-size: 1.2em;
+    height: 34px;
+    width: 200px;
+    border: none;
+}
+
+.itemsRemoveList {
+    height: 30px;
+    width: 120px;
+    border-width: 1px;
+    border-color: rgb(29, 54, 138);
+}
+
+.main-footer {
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 109, 73);
+}

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Add Merch</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="modify_merch.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1 class="shop-title">SHOP</h1>
+            <form action="/">
+                <button class="btn btn-nav">Store</button>
+            </form>
+        </header>
+        <section>
+            <div class="addMerchForm">
+                <form action="/addItem" method="POST">
+                    <input class="inputBox" placeholder="item name" name="add_name"> <br><br>
+                    <input class="inputBox" placeholder="item price" name="add_price"> <br><br>
+                    <select class="imgSelectList" name="add_img">
+                        <option></option>
+                        <option value="coffee_mug.jpg">Coffee Mug</option>
+                        <option value="t-shirt.jpg">T-Shirt</option>  
+                        <option value="keyboard.jpg">Keyboard</option> 
+                        <option value="mouse.jpg">Mouse</option>  
+                        <option value="placeholder.jpg">Placeholder Image</option>         
+                    </select> <br><br>
+                    <button class="btn" name="submitBtn">Submit</button>
+                </form>
+            </div>
+        </section>
+        <form class="removeMerchForm" method="POST" action="/removeItem">
+            <select class="itemsRemoveList" name="itemsRemoveList">
+                <option></option>
+                <% dropdownVals.forEach(function(item) { %>
+                    <option><%= item.name %></option>
+                <% }) %>
+            </select>
+            <input class="btn" type="submit" value="Remove Item">
+        </form>
+        <form class="removeMerchForm" action="/removeAll" method="POST">
+            <button class="btn-removeAllMerch">Remove all Merch</button>
+        </form>
+        <div class="emptyBlock"></div>
+        <footer class="main-footer"></footer>
+    </body>
+</html>
