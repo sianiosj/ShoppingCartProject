@@ -78,33 +78,7 @@ app.post('/removeAll', (req, res) => {
 })
 
 app.post('/purchase', (req, res) => {
-
     res.end()
-    // db.items.find((err, data) => {
-    //     if (err) {
-    //         console.log("Error fetching data...")
-    //     } else {
-    //         itemsJson = data
-    //         let total = 0
-    //         req.body.items.forEach((item) => {
-    //             const itemJson = itemsJson.find((i) => {
-    //                 return i.id == item.id
-    //             })
-    //         total = total + itemJson.price * item.quantity
-    //         })
-    //         stripe.charges.create({
-    //             amount: total,
-    //             source: req.body.stripeTokenId,
-    //             currency: 'eur'
-    //         }).then(() => {
-    //             console.log('charge successful...')
-    //             res.json({ message: 'Purchase Successful' })
-    //         }).catch(() => {
-    //             console.log('charge failed...')
-    //             res.status(500).end()
-    //         })
-    //     }
-    // })
 })
 
 app.listen(3000, () => {

@@ -30,48 +30,6 @@ function ready() {
 
 var stripeHandler = StripeCheckout.configure()
 
-// var stripeHandler = StripeCheckout.configure({
-//     key: stripePublicKey,
-//     locale: 'en',
-//     token: (token) => {
-//         var items = []
-//         var cartItemsContainer = document.getElementsByClassName('cart-items')[0]
-//         var cartRows = cartItemsContainer.getElementsByClassName('cart-row')
-//         for (var i=0; i<cartRows.length; i++){
-//             var cartRow = cartRows[i];
-//             var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-//             var quantity = quantityElement.value
-//             var id = cartRow.dataset.itemId
-//             items.push({
-//                 id: id,
-//                 quanity: quantity
-//             })
-//         }
-//         fetch('/purchase', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'Accept': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 stripeTokenId: token.id,
-//                 items: items
-//             })
-//         }).then((res) => {
-//             return res.json()
-//         }).then((data) => {
-//             alert(data.message)
-//             var cartItems = document.getElementsByClassName('cart-items')[0]
-//             while (cartItems.hasChildNodes()) {
-//                 cartItems.removeChild(cartItems.firstChild)
-//             }
-//             updateTotal()
-//         }).catch((error) => {
-//             console.error(error)
-//         })
-//     }
-// })
-
 function purchaseClicked(event) {
     var priceElement = document.getElementsByClassName('cart-total-price')[0]
     var price = parseFloat(priceElement.innerText.replace('€', '')) * 100
